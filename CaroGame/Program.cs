@@ -15,7 +15,7 @@ namespace CaroGame
         static void Main(string[] args)
         {
             Form form = new Form();
-
+            form.Text = "Caro Game";
             Board board = new Board(form);
             heightForm = board.SizeOfBoard * board.SquareHeight + (int)(board.SquareHeight * 0.65) + 20;
             widthForm = board.SizeOfBoard * board.SquareWidth + (int)(board.SquareWidth * 0.65);

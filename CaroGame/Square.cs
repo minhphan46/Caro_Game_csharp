@@ -76,7 +76,11 @@ namespace CaroGame
             }
             if (board.CheckGameOver(sq))
             {
-                DialogResult result = MessageBox.Show("GAME OVER");
+                DialogResult result;
+                if (sq.Item.Color == ItemColor.Red)
+                    result = MessageBox.Show("BLUE WIN");
+                else
+                    result = MessageBox.Show("RED WIN");
                 if (result == DialogResult.OK)
                 {
                     for (int i = 0; i < board.SizeOfBoard; i++)
